@@ -4,7 +4,7 @@ body{
   margin: 0;
   padding: 0;
   font-size: 16pt; 
-  font-family: "Raleway", "Sans-Serif";
+  font-family: "Raleway", sans-Serif;
   background-image: url('/images/concrete_seamless.png');
 }
 
@@ -36,6 +36,7 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 
 }
 
@@ -66,6 +67,7 @@ header{
 .gallery{
   min-height: 600px;
   /*Your code here again.*/
+  flex-direction: column;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
