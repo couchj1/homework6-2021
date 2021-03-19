@@ -21,7 +21,6 @@ header{
 /*Requirement 3*/
 .nav_links{
   /*Your code here again.*/
-
   display: flex;
   flex-direction: column;
 }
@@ -34,7 +33,7 @@ header{
     /*Don't forget to vertically and horizontally 
     align the element*/
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 
@@ -50,6 +49,7 @@ header{
   /*Take a look at flex-basis*/
   flex-basis: 400px;
   width: 400px;
+  flex-direction: column;
 
 }
 
@@ -67,7 +67,9 @@ header{
   min-height: 600px;
   /*Your code here again.*/
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-grow: 1;
 
 }
 
@@ -97,7 +99,7 @@ header{
   }
   to { 
     opacity: 1;
-    width: 420 px; 
+    width: 420px; 
   }
 }
 
@@ -109,7 +111,7 @@ header{
   }
   to { 
     opacity: 1;
-    width: 420 px; 
+    width: 420px; 
   }
 } 
 
@@ -121,7 +123,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+
 
   }
 
@@ -130,29 +132,56 @@ header{
     /*Your code here again.*/  
     display: flex;
     flex-direction: row;
+    align-items: center;
     /* align-items: flex-end; */
   }
 
   /*Requirement 11*/
   .package {
     /*Your code here again.*/
+    display: flex;
+    flex-basis: 230px;
   } 
 }
 
 /*Requirement 12*/
 /*Add media query to handle reduced-motion*/
 /*Your code here again.*/ 
-
-
+@media (prefers-reduced-motion: reduce) {
+  #logo {
+    animation: none;
+  }
 
 @media print { 
 
-  /*Requirement 13*/
-  /*Requirement 14*/
-  /*Requirement 15*/
-  /*Requirement 16*/
-  /*Requirement 17*/
-  /*Requirement 18*/
- 
+  body{
+    background-image: none;
+  }
+  
+  nav{
+    width: 100%
+  }
+  
+  header{
+    flex-direction: column;
+  }
+
+  .nav_links{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .price {
+    align-items: flex-end;
+  }
+
+  .package {
+    border: 2px solid #45ADAD;
+    flex-basis: 200px;
+  }
+
+  .gallery, #gallery {
+    display: none;
+  }
 }
 
